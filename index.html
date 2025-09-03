@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMIT Quiz App Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#1e293b', // A darker gray for dark mode body
+                        light: '#ffffff' // White for light mode body
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "ui-sans-serif", "system-ui"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light text-gray-800 transition-colors duration-300">
+    <header class="flex justify-between items-center px-4 py-2 sm:px-6 sm:py-4 bg-blue-200 text-white">
+        <h1 class="text-xl font-bold"><img class="h-8 sm:h-12" src="https://smit-quiz-apps.netlify.app/images/smit-logo.png" alt="SMIT Logo"></h1>
+        <button id="toggleTheme" class="bg-white text-blue-500 px-3 py-1 sm:px-4 sm:py-2 rounded-lg shadow hover:bg-gray-200 text-sm sm:text-base">
+            Switch Mode
+        </button>
+    </header>
+
+    <section class="text-center py-8 px-4 sm:py-12">
+        <h2 class="text-4xl sm:text-6xl font-semibold text-blue-500">Quiz Application</h2>
+        <p class="mt-2 text-gray-600 text-xl sm:text-4xl">Saylani Mass IT Training Program</p>
+        <p class="mt-2 text-gray-600 text-lg sm:text-3xl max-w-3xl mx-auto">Saylani Mass IT Training program is an institute that delivers the latest IT education (FREE OF COST).</p>
+        <p class="mt-2 text-gray-600 text-lg sm:text-3xl max-w-3xl mx-auto">Saylani Mass Training Department is one of the departments that is running under Saylani Welfare Trust Management.</p>
+        <h2 class="text-gray-600 font-bold mt-5 text-xl sm:text-4xl">Start Your Exam Here:</h2>
+        <div class="mt-6">
+            <a href="LOGIN.HTML" class="inline-block bg-blue-500 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 font-bold text-base sm:text-lg">Continue with Login</a>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 bg-gray-200 text-gray-600 text-xs sm:text-sm font-bold">
+        Copyright © Muhammad Rafay Sheikhe | All Rights Reserved
+    </footer>
+
+    <script>
+        const btn = document.getElementById("toggleTheme");
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("bg-light");
+            document.body.classList.toggle("text-gray-800");
+            document.body.classList.toggle("bg-dark");
+            document.body.classList.toggle("text-white");
+        });
+    </script>
+</body>
+</html>

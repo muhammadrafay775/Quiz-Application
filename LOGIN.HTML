@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind custom theme (colors close to SMIT App)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563eb",   // Blue-600
+            secondary: "#16a34a", // Green-600
+            light: "#f3f4f6",     // Gray-100
+            dark: "#1f2937"       // Gray-800
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-light">
+
+  <!-- Login Form -->
+  <section class="max-w-md mx-auto bg-white rounded-xl shadow p-6 my-8 mt-6">
+    <h3 class="text-xl font-bold text-center mb-4">Login</h3>
+    <form class="space-y-4">
+      <input type="email" placeholder="Email" class="w-full border rounded-lg px-3 py-2 focus:ring focus:ring-primary focus:outline-none" />
+      <input type="password" placeholder="Password" class="w-full border rounded-lg px-3 py-2 focus:ring focus:ring-primary focus:outline-none" />
+      <div class="flex items-center justify-between text-sm">
+        <label><input type="checkbox" class="mr-1"> Remember me</label>
+        <a href="#" class="text-primary hover:underline">Forgot Password?</a>
+      </div>
+      <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-blue-700">Login</button>
+    </form>
+    <p class="text-center text-sm mt-4">Don’t have an account? 
+      <a href="#" class="text-secondary hover:underline">Register</a>
+    </p>
+  </section>
+
+  <!-- Start Quiz Button -->
+  <div class="flex justify-center mb-8">
+    <a href="quiz.html">
+      <button class="w-72 sm:w-80 bg-primary font-bold text-white py-2 rounded-lg hover:bg-blue-700">
+        Start Quiz
+      </button>
+    </a>
+  </div>
+
+</body>
+</html>

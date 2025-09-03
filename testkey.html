@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Test Key</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Custom Tailwind theme
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563eb",   // Blue
+            secondary: "#16a34a", // Green
+            light: "#f3f4f6",     // Gray-100
+            dark: "#1f2937"       // Gray-800
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-light flex items-center justify-center min-h-screen">
+
+  <!-- Container -->
+  <div class="w-full max-w-md bg-white shadow-lg rounded-xl p-8">
+    
+    <!-- Logo -->
+    <div class="flex justify-center mb-6">
+      <img class="h-12 sm:h-14" src="https://smit-quiz-apps.netlify.app/images/smit-logo.png" alt="SMIT Logo">
+    </div>
+
+    <!-- Heading -->
+    <h1 class="text-2xl sm:text-3xl font-bold text-blue-900 text-center mb-6">
+      <u>Enter Test Key</u>
+    </h1>
+
+    <!-- Input -->
+    <input 
+      id="testKeyInput"
+      type="text" 
+      placeholder="Enter your test key"
+      class="w-full text-lg sm:text-xl border border-gray-300 focus:ring focus:ring-primary focus:outline-none bg-white text-black h-[60px] rounded-lg px-4 mb-4"
+    >
+
+    <!-- Error message -->
+    <p id="errorMsg" class="text-red-600 text-sm mb-4 hidden">❌ Invalid Test Key. Please try again.</p>
+
+    <!-- Button -->
+    <button 
+      onclick="validateKey()"
+      class="w-full bg-primary text-white text-lg font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+      Login
+    </button>
+
+  </div>
+<SCRIPT>
+     function validateKey() {
+      const keyInput = document.getElementById("testKeyInput").value.trim();
+      const errorMsg = document.getElementById("errorMsg");
+      const correctKey = "SMIT123";
+      if (keyInput === correctKey) {
+        window.location.href = "qscreen.html";
+      } else {        errorMsg.classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
